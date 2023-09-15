@@ -29,7 +29,7 @@ class SocialNetworkAuthEvent extends Event
     protected $client;
     protected $account;
 
-    public function __construct(SocialNetworkAccount $account, ClientInterface $client, $config = [])
+    public function __construct(SocialNetworkAccount|false $account, ClientInterface $client, $config = [])
     {
         $this->account = $account;
         $this->client = $client;
